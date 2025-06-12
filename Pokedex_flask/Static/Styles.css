@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;  /* Define la fuente principal del cuerpo del documento */
+    margin: 20px;  /* Establece un margen externo de 20 píxeles alrededor del contenido */
+    padding: 20px;  /* Establece un espacio interno de 20 píxeles dentro del cuerpo */
+    background-color: #f0f0f0;  /* Define el color de fondo de la página con un gris claro */
+}
+
+h1 {
+    color: #333;  /* Cambia el color del texto del encabezado principal a un gris oscuro */
+}
+
+a {
+    margin: 10px;  /* Establece un margen externo de 10 píxeles alrededor de los enlaces */
+    display: inline-block;  /* Convierte los enlaces en elementos tipo bloque para aplicar estilos */
+    text-decoration: none;  /* Elimina el subrayado predeterminado en los enlaces */
+    background-color: #007bff;  /* Establece un fondo azul brillante para los enlaces */
+    color: white;  /* Cambia el color del texto de los enlaces a blanco */
+    padding: 10px;  /* Añade un espacio interno de 10 píxeles dentro de los enlaces */
+    border-radius: 5px;  /* Redondea los bordes de los enlaces para un diseño más moderno */
+}
+
+a:hover {
+    background-color: #0056b3;  /* Cambia el color de fondo del enlace cuando el usuario pasa el cursor sobre él */
+}
