@@ -1,0 +1,22 @@
+<!DOCTYPE html>  <!-- Define el tipo de documento como HTML5 -->
+<html>
+<head>
+    <title>Pokédex - Inicio</title>  <!-- Título de la página que aparecerá en la pestaña del navegador -->
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">  
+    <!-- Enlace a la hoja de estilos CSS ubicada en la carpeta 'static' -->
+    <!-- Flask utiliza 'url_for()' para generar la ruta correcta del archivo estático -->
+</head>
+<body>
+    <h1>Bienvenido a la Pokédex</h1>  <!-- Encabezado principal de la página -->
+
+    <p>Regístrate o inicia sesión para comenzar.</p>  
+    <!-- Texto introductorio que informa al usuario sobre las opciones disponibles -->
+
+    <a href="{{ url_for('login') }}">Iniciar sesión</a>  
+    <!-- Botón de enlace para acceder a la página de login -->
+    
+    <a href="{{ url_for('register') }}">Registrarse</a>  
+    <!-- Botón de enlace para acceder a la página de registro de usuario -->
+</body>
+</html>
