@@ -1,0 +1,32 @@
+<!DOCTYPE html>  <!-- Define el documento como HTML5 -->
+<html lang="es">  <!-- Especifica que el idioma de la página es español -->
+<head>
+    <meta charset="UTF-8">  <!-- Define la codificación de caracteres para soportar caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Hace que la página sea responsive en dispositivos móviles -->
+    <title>Editar Registro</title>  <!-- Establece el título que aparecerá en la pestaña del navegador -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">  
+    <!-- Enlaza la hoja de estilos ubicada en la carpeta 'static' -->
+</head>
+<body>
+    <h1>Editar Registro</h1>  <!-- Título principal de la página -->
+
+    <!-- Formulario para editar un registro existente -->
+    <form action="{{ url_for('edit_record', id=record.id) }}" method="POST">  
+        <!-- Define la acción hacia la ruta 'edit_record' en Flask con el ID del registro -->
+        <!-- Usa el método POST para enviar los datos actualizados al servidor -->
+
+        <label for="name">Nombre del registro:</label>  <!-- Etiqueta para el campo del nombre -->
+        <input type="text" id="name" name="name" value="{{ record.name }}" required>  
+        <!-- Campo de entrada prellenado con el nombre actual del registro -->
+
+        <label for="description">Descripción:</label>  <!-- Etiqueta para el campo de descripción -->
+        <textarea id="description" name="description" required>{{ record.description }}</textarea>  
+        <!-- Área de texto prellenada con la descripción actual del registro -->
+
+        <button type="submit">Guardar Cambios</button>  <!-- Botón para enviar el formulario -->
+    </form>
+
+    <a href="{{ url_for('dashboard') }}">Volver al Dashboard</a>  
+    <!-- Enlace para regresar a la página del dashboard -->
+</body>
+</html>
