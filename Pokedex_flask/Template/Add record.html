@@ -1,0 +1,30 @@
+<!DOCTYPE html>  <!-- Define el documento como HTML5 -->
+<html lang="es">  <!-- Especifica el idioma de la página en español -->
+<head>
+    <meta charset="UTF-8">  <!-- Define la codificación de caracteres para permitir caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Hace que la página sea responsive en móviles -->
+    <title>Agregar Nuevo Registro</title>  <!-- Establece el título de la página en la pestaña del navegador -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">  
+    <!-- Enlace a la hoja de estilos ubicada en la carpeta 'static' -->
+</head>
+<body>
+    <h1>Agregar Nuevo Registro</h1>  <!-- Título principal de la página -->
+
+    <!-- Formulario para agregar un nuevo registro -->
+    <form action="{{ url_for('add_record') }}" method="POST">  
+        <!-- La acción apunta a la ruta 'add_record' en Flask y usa el método POST para enviar datos -->
+
+        <label for="name">Nombre del registro:</label>  <!-- Etiqueta para el campo de entrada del nombre -->
+        <input type="text" id="name" name="name" required>  <!-- Campo de texto obligatorio para el nombre del registro -->
+
+        <label for="description">Descripción:</label>  <!-- Etiqueta para el campo de descripción -->
+        <textarea id="description" name="description" required></textarea>  
+        <!-- Área de texto obligatoria para la descripción del registro -->
+
+        <button type="submit">Guardar Registro</button>  <!-- Botón para enviar el formulario -->
+    </form>
+
+    <a href="{{ url_for('dashboard') }}">Volver al Dashboard</a>  
+    <!-- Enlace para regresar a la página del dashboard -->
+</body>
+</html>
