@@ -13,4 +13,3 @@ class Config:  # Define una clase de configuración para la aplicación Flask
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False  
     # Desactiva el seguimiento de modificaciones de objetos en SQLAlchemy para mejorar el rendimiento.
-
