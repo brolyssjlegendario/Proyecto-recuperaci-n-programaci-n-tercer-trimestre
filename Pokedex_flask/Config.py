@@ -1,5 +1,6 @@
 import os  # Importa el módulo 'os', que permite interactuar con el sistema operativo
 
+
 class Config:  # Define una clase de configuración para la aplicación Flask
     SECRET_KEY = 'clave_secreta'  
     # Establece una clave secreta para la aplicación. 
