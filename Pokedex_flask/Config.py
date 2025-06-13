@@ -11,7 +11,6 @@ class Config:  # Define una clase de configuración para la aplicación Flask
     # Define la URL de conexión a la base de datos SQLite.
     # Aquí, 'sqlite:///' indica que se usará SQLite y 'database.db' es el nombre del archivo de la base de datos.
 
-
-    
     SQLALCHEMY_TRACK_MODIFICATIONS = False  
     # Desactiva el seguimiento de modificaciones de objetos en SQLAlchemy para mejorar el rendimiento.
+
